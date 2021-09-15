@@ -174,7 +174,7 @@ if __name__ == '__main__':
 
     parser = argparse.ArgumentParser()
     parser.add_argument("--type-bert", type=str, default="base", help="base or large of Bert")
-    parser.add_argument("--batch-size", type=int, default=128, help="batch size")
+    parser.add_argument("--batch-size", type=int, default=64, help="batch size")
     parser.add_argument('--embedding-dim-word', type=int, default=768, help='dimension of word embedding')
     parser.add_argument('--embedding-dim-pretrained', type=int, default=50, help='dimension of pretrained word embedding')
     parser.add_argument('--embedding-dim-pos', type=int, default=32, help='dimension POS embedding')

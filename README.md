@@ -6,7 +6,7 @@ The goal of the SRL is to extract predicate-argument structure of a sentence, id
 ## Install 
 
 ```
-conda create --name srl python=3.7.11
+conda create --name srl python=3.7
 conda activate srl
 pip install -r requirements.txt
 ```

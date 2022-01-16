@@ -3,20 +3,33 @@
 Semantic Role Labeling is a fundamental NLPtask, which has the goal of finding semantic roles for each predicate in a sentence.
 The goal of the SRL is to extract predicate-argument structure of a sentence, identifying ”who did what to whom”, ”when”, ”where” etc.For example, consider this sentence:The cat eats a fish. Eats is the verb,The cat is the subject and a fish is the object complement. We are not interested in the meaning of ”cat” or ”fish”, but we want to identify and classify them, i.e, associate each argument with its corresponding role. To solve this task, LSTM-based models in different configurations were used in this paper, including pre-trained word embeddings, contextualized word embedding from BERT and Graph Convolutional Network. Furthermore, the subtask of disambiguation of predicates is also taken into consideration, because every often the datasets that are provided have information on the predicates present in the sentences, but not the clarification of the meaning of them.
 
-## Install 
+## Table of contents
+
+* [Development Setup](#Development-Setup)
+* [Requirements](#Requirements)
+  * [Download the glove data](#Download-Dataset)
+  * [Run](#Run)
+
+### Development Set
+
+<p align="center">
+  <img width="600" height="350" src="https://user-images.githubusercontent.com/56698309/149672469-c53f4a08-5297-487d-a076-9cbddc242818.png">
+</p>
+
+### Requirements 
 
 ```
 conda create --name srl python=3.7
 conda activate srl
 pip install -r requirements.txt
 ```
-## Download dataset
+### Download Dataset
 ```
 $ cd dataset
 $ python download_dataset.py
 ```
 
-## Run
+### Run
 
 ```
 python main.py type-bert TYPE-BERT --batch-size BATCH-SIZE --embedding-dim-word EMBEDDING-DIM-WORD --embedding-dim-pretrained -- EMBEDDING-DIM-PRETRAINED --embedding-dim-pos EMBEDDING-DIM-POS --embedding-dim-pred EMBEDDING-DIM-PRED embedding-dim-dep-rel EMBEDDING-DIM-DEP-REL --embedding-dim-lemma EMBEDDING-DIM-LEMMA --hidden-dim HIDDEN-DIM --epochs EPOCHS --batch-size BATCH-SIZE --lr LEARNING-RATE --dropout DROPOUT --bidirectional BIDIRECTIONAL --num-layers NUM-LAYERS --only-test ONLY-TEST --pred-disamb PRED-DISAMB --pred-dim PRED-DIM

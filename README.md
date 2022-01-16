@@ -10,7 +10,7 @@ The goal of the SRL is to extract predicate-argument structure of a sentence, id
   * [Download the glove data](#Download-Dataset)
   * [Run](#Run)
 
-### Development Set
+### Development Setup
 
 <p align="center">
   <img width="600" height="350" src="https://user-images.githubusercontent.com/56698309/149672469-c53f4a08-5297-487d-a076-9cbddc242818.png">
